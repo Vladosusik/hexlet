@@ -5,42 +5,45 @@
 }
 
 .tabs__list {
-  display: flex;
-  flex-wrap: wrap;
-  border: 1px solid hsl(var(--border));
-  border-radius: 0.25rem;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
 }
 
 .tabs__btn {
-  flex: 1;
-  min-width: 120px;
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   font-weight: 500;
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
-  border: none;
-  border-right: 1px solid hsl(var(--border));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.3rem;
   cursor: pointer;
   text-align: center;
   white-space: nowrap;
-  transition: background-color 0.15s;
-}
-
-.tabs__btn:last-child {
-  border-right: none;
+  transition: background-color 0.15s, color 0.15s, border-color 0.15s;
 }
 
 .tabs__btn:hover {
-  background-color: hsl(var(--muted));
-}
-
-.tabs__btn--active {
   background-color: hsl(var(--foreground));
   color: hsl(var(--background));
+  border-color: hsl(var(--foreground));
 }
 
-.tabs__btn--active:hover {
-  background-color: hsl(var(--foreground));
+
+
+@media (max-width: 1023px) {
+  .tabs__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tabs__btn {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs__list {
+    grid-template-columns: 1fr;
+  }
 }

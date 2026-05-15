@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import HeroSection from "./components/HeroSection/HeroSection";
 import CategoryTabs from "./components/CategoryTabs/CategoryTabs";
 
-function App() {
+export const App = () => {
   const [dark, setDark] = useState(false);
   return (
     <div className={dark ? "dark" : ""}>
@@ -17,4 +17,5 @@ function App() {
     </div>
   );
 }
+
 export default App

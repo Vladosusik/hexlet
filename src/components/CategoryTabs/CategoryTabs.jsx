@@ -10,7 +10,7 @@ const CATEGORIES = [
   "Полный каталог",
 ];
 
-export default function CategoryTabs() {
+export const CategoryTabs = () => {
   const [active, setActive] = useState("Программирование");
 
   return (
@@ -29,3 +29,5 @@ export default function CategoryTabs() {
     </div>
   );
 }
+
+export default CategoryTabs
