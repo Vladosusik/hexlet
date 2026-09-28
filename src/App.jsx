@@ -1,7 +1,8 @@
 import { useState } from "react";
-import Header from "./components/Header/Header";
-import HeroSection from "./components/HeroSection/HeroSection";
-import CategoryTabs from "./components/CategoryTabs/CategoryTabs";
+import Header from "./components/Header/Header.jsx";
+import HeroSection from "./components/HeroSection/HeroSection.jsx";
+import CategoryTabs from "./components/CategoryTabs/CategoryTabs.jsx";
+import ProgramsSection from "./components/ProgramsSection/ProgramsSection.jsx"
 
 export const App = () => {
   const [dark, setDark] = useState(false);
@@ -12,6 +13,7 @@ export const App = () => {
         <main>
           <HeroSection />
           <CategoryTabs />
+          <ProgramsSection/>
         </main>
       </div>
     </div>
